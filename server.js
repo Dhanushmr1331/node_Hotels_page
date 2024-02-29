@@ -6,7 +6,7 @@ require('dotenv').config();
 const PORT=process.env.PORT || 3000;
 
 const bodyParser = require('body-parser');
-const person = require('./models/person');
+
 app.use(bodyParser.json());//store in req.body
 
 
@@ -17,10 +17,11 @@ app.get('/', function (req, res) {
 
 //import routes files
 const personroutes=require('./routes/personRoutes');
-
-app.use('/person',personroutes);
 const menuItemroutes=require('./routes/menuItemRoutes');
+app.use('/person',personroutes);
 app.use('/MenuItem',menuItemroutes);
+
+
 
 
 app.listen(PORT,()=>{
