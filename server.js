@@ -11,7 +11,8 @@ app.use(bodyParser.json());//store in req.body
 
 
 app.get('/', function (req, res) {
-  res.send('hi welcome to my hotel.. how can i help you?');
+  res.send('hi welcome to my hotel.. how can i help you? \n Hotel Application The Node Hotel application is a Node.js-based system developed using the Express.js framework, with MongoDB as the chosen database. This application manages information related to persons (staff) and menu items. It exposes specific endpoints to handle CRUD (Create, Read, Update, Delete) operations for both persons and menu items.');
+  
 })
 
 
